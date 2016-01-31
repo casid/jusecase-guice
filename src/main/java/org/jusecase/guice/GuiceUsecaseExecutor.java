@@ -1,0 +1,22 @@
+package org.jusecase.guice;
+
+import com.google.inject.Injector;
+import org.jusecase.AbstractUsecaseExecutor;
+import org.jusecase.Usecase;
+
+public class GuiceUsecaseExecutor extends AbstractUsecaseExecutor {
+    private final Injector injector;
+
+    public GuiceUsecaseExecutor(Injector injector) {
+        this.injector = injector;
+    }
+
+    public void addUsecase(Class<? extends Usecase> usecaseClass) {
+        addUsecase(getRequestClass(usecaseClass), usecaseClass);
+    }
+
+    @Override
+    protected Object resolveUsecase(Object usecase) {
+        return injector.getInstance((Class<?>)usecase);
+    }
+}
