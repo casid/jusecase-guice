@@ -1,4 +1,4 @@
-package org.jusecase.guice;
+package org.jusecase.executors.guice;
 
 import com.google.inject.Guice;
 import org.junit.Before;

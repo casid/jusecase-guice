@@ -1,7 +1,7 @@
-package org.jusecase.guice;
+package org.jusecase.executors.guice;
 
 import com.google.inject.Injector;
-import org.jusecase.AbstractUsecaseExecutor;
+import org.jusecase.executors.AbstractUsecaseExecutor;
 import org.jusecase.Usecase;
 
 public class GuiceUsecaseExecutor extends AbstractUsecaseExecutor {
