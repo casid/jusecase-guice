@@ -45,6 +45,7 @@
             <groupId>org.jusecase</groupId>
             <artifactId>jusecase</artifactId>
             <version>0.1.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jusecase</groupId>
