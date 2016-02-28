@@ -11,6 +11,10 @@ public class GuiceUsecaseExecutor extends AbstractUsecaseExecutor {
         this.injector = injector;
     }
 
+    protected Injector getInjector() {
+        return injector;
+    }
+
     public void addUsecase(Class<? extends Usecase> usecaseClass) {
         addUsecase(getRequestClass(usecaseClass), usecaseClass);
     }

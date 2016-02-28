@@ -1,6 +1,7 @@
 package org.jusecase.executors.guice;
 
 import com.google.inject.Guice;
+import com.google.inject.Injector;
 import org.junit.Before;
 import org.junit.Test;
 import org.jusecase.UsecaseExecutorException;
@@ -9,6 +10,7 @@ import org.jusecase.example.trivial.CalculateSum;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 
 public class GuiceUsecaseExecutorTest {
     private GuiceUsecaseExecutor executor;
@@ -56,6 +58,14 @@ public class GuiceUsecaseExecutorTest {
         }
 
         thenExceptionMessageIs("Request 'org.jusecase.example.trivial.CalculateSum$Request' is already handled by a usecase.");
+    }
+
+    @Test
+    public void injectorIsExposed() {
+        Injector injector = Guice.createInjector();
+        executor = new GuiceUsecaseExecutor(injector);
+
+        assertSame(injector, executor.getInjector());
     }
 
     private void thenAppendCharactersCanBeExecuted() {
