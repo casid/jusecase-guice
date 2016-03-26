@@ -29,4 +29,4 @@ public class BusinessLogic extends GuiceUsecaseExecutor {
 ```
 
 ## Usage in real-life project
-Have a look at the [Logic class](https://github.com/casid/mazebert-ladder/blob/master/src/main/java/com/mazebert/Logic.java) at the Mazebert TD ladder backend project.
+Have a look at the [BusinessLogic class](https://github.com/casid/mazebert-ladder/blob/master/src/main/java/com/mazebert/BusinessLogic.java) at the Mazebert TD ladder backend project.
